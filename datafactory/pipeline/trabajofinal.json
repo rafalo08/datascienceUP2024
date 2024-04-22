@@ -129,6 +129,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "TEST DATE",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "TEST_DATE",
 									"type": "DateTime",
