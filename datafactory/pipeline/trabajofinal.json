@@ -130,7 +130,7 @@
 							},
 							{
 								"source": {
-									"name": "TEST DATE",
+									"name": "TEST_DATE",
 									"type": "String",
 									"physicalType": "String"
 								},
