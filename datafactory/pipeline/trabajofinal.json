@@ -38,7 +38,7 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "id_pozo;nombre",
+									"name": "id_pozo",
 									"type": "String",
 									"physicalType": "String"
 								},
@@ -49,6 +49,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "nombre",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "nombre",
 									"type": "String",
