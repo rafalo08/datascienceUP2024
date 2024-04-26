@@ -2,12 +2,12 @@
 	"name": "SQL script 1",
 	"properties": {
 		"content": {
-			"query": "CREATE DATABASE Doris;\nGO",
+			"query": "CREATE DATABASE Doris;\nGO\n\nUSE Doris;\nGO",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "master",
+				"databaseName": "Doris",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
