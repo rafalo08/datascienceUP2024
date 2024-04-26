@@ -2,7 +2,7 @@
 	"name": "SQL script 1",
 	"properties": {
 		"content": {
-			"query": "CREATE DATABASE Doris;\nGO\n\nUSE Doris;\nGO\n\nCREATE SCHEMA business AUTHORIZATION dbo;\nGO\n\nCREATE SCHEMA raw AUTHORIZATION dbo;\nGO",
+			"query": "CREATE DATABASE Doris;\nGO\n\nUSE Doris;\nGO\n\nCREATE SCHEMA business AUTHORIZATION dbo;\nGO\n\nCREATE SCHEMA raw AUTHORIZATION dbo;\nGO\n\nCREATE MASTER KEY ENCRYPTION BY PASSWORD = '@#rafalo22';\nGO",
 			"metadata": {
 				"language": "sql"
 			},
