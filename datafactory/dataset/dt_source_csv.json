@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "tabla_pozos.csv",
+				"fileName": "tabla_runs.csv",
 				"folderPath": "trabajofinal_csv/input",
 				"container": "datascience"
 			},
