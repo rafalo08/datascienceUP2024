@@ -30,7 +30,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedTextCSV",
+						"referenceName": "dt_source_csv",
 						"type": "DatasetReference"
 					}
 				]
