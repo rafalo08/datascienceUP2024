@@ -41,6 +41,18 @@
 						"mappings": [
 							{
 								"source": {
+									"name": "id_run",
+									"type": "Int16",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "id_run",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
 									"name": "id_pozo",
 									"type": "Int16",
 									"physicalType": "String"
@@ -53,12 +65,48 @@
 							},
 							{
 								"source": {
-									"name": "nombre",
-									"type": "String",
+									"name": "RUN_Nro.",
+									"type": "Int16",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "nombre",
+									"name": "RUN_Nro.",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "RUN_DATE",
+									"type": "Date",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RUN_DATE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "INTAKE",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "INTAKE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SBHP",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SBHP",
 									"type": "String",
 									"physicalType": "UTF8"
 								}
