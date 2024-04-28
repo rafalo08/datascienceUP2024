@@ -5,13 +5,27 @@
 			"referenceName": "AzureBlobStorage2024",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"folder": {
+				"type": "string"
+			},
+			"file": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "tabla_medprod.csv",
-				"folderPath": "trabajofinal_csv/input",
+				"fileName": {
+					"value": "@dataset().file",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().folder",
+					"type": "Expression"
+				},
 				"container": "datascience"
 			},
 			"columnDelimiter": ";",
