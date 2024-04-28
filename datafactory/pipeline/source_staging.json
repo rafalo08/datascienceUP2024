@@ -26,7 +26,24 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AvroSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "AvroWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -35,6 +52,16 @@
 						"parameters": {
 							"folder": "trabajofinal_csv/input",
 							"file": "tabla_pozos.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "dt_sink_avro",
+						"type": "DatasetReference",
+						"parameters": {
+							"folder": "trabajofinal_csv/input",
+							"file": "tabla_pozos.avro"
 						}
 					}
 				]
