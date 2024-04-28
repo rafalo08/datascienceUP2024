@@ -13,11 +13,25 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          id_run as short,",
+				"          id_pozo as short,",
+				"          {RUN_Nro.} as short,",
+				"          RUN_DATE as date,",
+				"          INTAKE as short,",
+				"          SBHP as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> runsdataflow"
+				"     ignoreNoFilesFound: false) ~> runsdataflow",
+				"runsdataflow select(skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
 			]
 		}
 	}
