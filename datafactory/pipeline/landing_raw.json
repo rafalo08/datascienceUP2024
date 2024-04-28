@@ -54,7 +54,17 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "runs_dataflow",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"runsdataflow": {
+								"directory": "trabfinal",
+								"filename": "tabla_runs.avro"
+							},
+							"sink1": {
+								"directory": "outparquet",
+								"filename": "runs.parquet"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
