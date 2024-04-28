@@ -16,6 +16,9 @@
 			"transformations": [
 				{
 					"name": "select1"
+				},
+				{
+					"name": "cast1"
 				}
 			],
 			"scriptLines": [
@@ -31,7 +34,16 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> runsdataflow",
 				"runsdataflow select(skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 cast(output(",
+				"          id_run as integer,",
+				"          id_pozo as integer,",
+				"          {RUN_Nro.} as integer,",
+				"          RUN_DATE as date,",
+				"          INTAKE as double,",
+				"          SBHP as double",
+				"     ),",
+				"     errors: true) ~> cast1"
 			]
 		}
 	}
