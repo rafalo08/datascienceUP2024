@@ -88,6 +88,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"dataflow": {
+						"referenceName": "medprod_dataflow",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"source1": {
+								"directory": "trabfinal",
+								"filename": "tabla_medprod.avro"
+							},
+							"sink1": {
+								"directory": "outparquet",
+								"filename": "medprod.parquet"
+							}
+						}
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
