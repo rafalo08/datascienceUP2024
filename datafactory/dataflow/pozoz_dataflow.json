@@ -55,7 +55,7 @@
 				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
-				"     partitionFileNames:[(pozos)],",
+				"     rowFolderUrlColumn:'nombre',",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
