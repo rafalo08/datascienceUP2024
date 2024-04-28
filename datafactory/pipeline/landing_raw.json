@@ -21,18 +21,6 @@
 							"pozossource": {
 								"directory": "trabfinal",
 								"filename": "tabla_pozos.avro"
-							},
-							"sink1": {
-								"directory": "outparquet",
-								"filename": "pozos.parquet"
-							}
-						},
-						"linkedServiceParameters": {
-							"sink1": {
-								"schemaLinkedService": {
-									"directory": "outparquet",
-									"filename": "pozos.parquet"
-								}
 							}
 						}
 					},
