@@ -22,6 +22,10 @@
 							"pozossource": {
 								"directory": "trabfinal",
 								"filename": "tabla_pozos.avro"
+							},
+							"sink1": {
+								"directory": "outparquet",
+								"filename": "pozos.parquet"
 							}
 						}
 					},
