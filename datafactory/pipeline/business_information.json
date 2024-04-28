@@ -1,0 +1,9 @@
+{
+	"name": "business_information",
+	"properties": {
+		"folder": {
+			"name": "04_information"
+		},
+		"annotations": []
+	}
+}
