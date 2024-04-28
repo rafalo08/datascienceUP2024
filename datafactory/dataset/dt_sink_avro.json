@@ -5,6 +5,14 @@
 			"referenceName": "AzureBlobStorage2024",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"folder": {
+				"type": "string"
+			},
+			"file": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Avro",
 		"typeProperties": {
