@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "dt_source_csv",
+						"referenceName": "dt_sink_avro",
 						"type": "DatasetReference"
 					},
 					"name": "pozossource"
