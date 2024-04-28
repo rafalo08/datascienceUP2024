@@ -18,7 +18,11 @@
 						"referenceName": "dt_sink_parquet",
 						"type": "DatasetReference"
 					},
-					"name": "sink1"
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "ADLS_LinkedService",
+						"type": "LinkedServiceReference"
+					}
 				}
 			],
 			"transformations": [
