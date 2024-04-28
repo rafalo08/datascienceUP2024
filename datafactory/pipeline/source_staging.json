@@ -319,12 +319,12 @@
 							},
 							{
 								"source": {
-									"name": "WC%",
+									"name": "WC",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "WC%",
+									"name": "WC",
 									"type": "String",
 									"physicalType": "String"
 								}
