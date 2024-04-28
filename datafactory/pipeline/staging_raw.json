@@ -1,0 +1,9 @@
+{
+	"name": "staging_raw",
+	"properties": {
+		"folder": {
+			"name": "02_raw"
+		},
+		"annotations": []
+	}
+}
