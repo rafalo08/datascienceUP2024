@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "pozos_csv_to_parquet",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
