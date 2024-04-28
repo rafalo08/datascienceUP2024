@@ -24,7 +24,7 @@
 								"filename": "tabla_pozos.avro"
 							},
 							"sink1": {
-								"directory": "out_parquet",
+								"directory": "outparquet",
 								"filename": "pozos.parquet"
 							}
 						}
