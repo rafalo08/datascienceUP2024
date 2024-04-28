@@ -1,0 +1,9 @@
+{
+	"name": "source_staging",
+	"properties": {
+		"folder": {
+			"name": "01_staging"
+		},
+		"annotations": []
+	}
+}
