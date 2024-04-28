@@ -5,6 +5,14 @@
 			"referenceName": "ADLS_LinkedService",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"directory": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
