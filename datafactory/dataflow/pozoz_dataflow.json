@@ -1,15 +1,15 @@
 {
-	"name": "dataflow1",
+	"name": "pozoz_dataflow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "dt_sink_avro",
+						"referenceName": "dt_source_csv",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "pozossource"
 				}
 			],
 			"sinks": [],
@@ -17,7 +17,7 @@
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> pozossource"
 			]
 		}
 	}
