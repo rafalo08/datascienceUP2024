@@ -26,6 +26,14 @@
 								"directory": "outparquet",
 								"filename": "pozos.parquet"
 							}
+						},
+						"linkedServiceParameters": {
+							"sink1": {
+								"schemaLinkedService": {
+									"directory": "outparquet",
+									"filename": "pozos.parquet"
+								}
+							}
 						}
 					},
 					"staging": {
