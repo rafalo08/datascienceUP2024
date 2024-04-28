@@ -301,6 +301,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "00_raw"
+		},
 		"annotations": []
 	}
 }
