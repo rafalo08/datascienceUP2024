@@ -17,7 +17,21 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "pozoz_dataflow",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"pozossource": {
+								"directory": "trabfinal",
+								"filename": "tabla_pozos.avro"
+							},
+							"source1": {
+								"folder": "trabajofinal_csv/input",
+								"file": "tabla_pozos.avro"
+							},
+							"sink1": {
+								"directory": "out_parquet",
+								"filename": "pozos.parquet"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,

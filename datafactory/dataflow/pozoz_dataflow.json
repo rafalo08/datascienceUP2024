@@ -10,6 +10,9 @@
 						"type": "DatasetReference"
 					},
 					"name": "pozossource"
+				},
+				{
+					"name": "source1"
 				}
 			],
 			"sinks": [
@@ -28,6 +31,9 @@
 			"transformations": [
 				{
 					"name": "select1"
+				},
+				{
+					"name": "cast1"
 				}
 			],
 			"scriptLines": [
@@ -38,13 +44,20 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> pozossource",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source1",
 				"pozossource select(mapColumn(",
 				"          id_pozo,",
 				"          nombre",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 sink(allowSchemaDrift: true,",
+				"select1 cast(output(",
+				"          id_pozo as integer,",
+				"          nombre as string",
+				"     ),",
+				"     errors: true) ~> cast1",
+				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
 				"     umask: 0022,",
