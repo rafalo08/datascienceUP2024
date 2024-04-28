@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "dt_source_csv",
+						"referenceName": "dt_sink_avro",
 						"type": "DatasetReference"
 					},
 					"name": "runsdataflow"
@@ -30,28 +30,12 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          id_run as short,",
-				"          id_pozo as short,",
-				"          {RUN_Nro.} as short,",
-				"          RUN_DATE as date,",
-				"          INTAKE as short,",
-				"          SBHP as short",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> runsdataflow",
 				"runsdataflow select(skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 cast(output(",
-				"          id_run as integer,",
-				"          id_pozo as integer,",
-				"          {RUN_Nro.} as integer,",
-				"          RUN_DATE as date,",
-				"          INTAKE as double,",
-				"          SBHP as double",
-				"     ),",
-				"     errors: true) ~> cast1",
+				"select1 cast(errors: true) ~> cast1",
 				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
