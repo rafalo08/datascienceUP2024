@@ -1,0 +1,10 @@
+{
+	"name": "ADLS_LinkedService",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stgtrabajofinal2024.dfs.core.windows.net/"
+		}
+	}
+}
