@@ -18,7 +18,7 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
+							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
@@ -29,7 +29,7 @@
 					"sink": {
 						"type": "AvroSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
 							"type": "AvroWriteSettings"
@@ -50,8 +50,8 @@
 						"referenceName": "dt_source_csv",
 						"type": "DatasetReference",
 						"parameters": {
-							"folder": "trabajofinal_csv/input",
-							"file": "tabla_pozos.csv"
+							"directory": "trabfinal",
+							"filename": "tabla_pozos.csv"
 						}
 					}
 				],
@@ -60,8 +60,8 @@
 						"referenceName": "dt_sink_avro",
 						"type": "DatasetReference",
 						"parameters": {
-							"folder": "trabajofinal_csv/input",
-							"file": "tabla_pozos.avro"
+							"directory": "trabfinal",
+							"filename": "tabla_pozos.avro"
 						}
 					}
 				]
