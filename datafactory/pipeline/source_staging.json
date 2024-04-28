@@ -31,7 +31,11 @@
 				"inputs": [
 					{
 						"referenceName": "dt_source_csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder": "trabajofinal_csv/input",
+							"file": "tabla_pozos.csv"
+						}
 					}
 				]
 			}
