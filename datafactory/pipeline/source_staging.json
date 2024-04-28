@@ -198,7 +198,7 @@
 						"referenceName": "dt_sink_avro",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "tabfinal",
+							"directory": "trabfinal",
 							"filename": "tabla_runs.avro"
 						}
 					}
