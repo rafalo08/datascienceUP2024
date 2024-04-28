@@ -1,0 +1,20 @@
+{
+	"name": "dt_sink_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "outparquet",
+				"fileSystem": "master"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
