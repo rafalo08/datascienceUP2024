@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://stgtrabajofinal2024.dfs.core.windows.net/"
+			"url": "https://sa2024uprcadev003.dfs.core.windows.net/"
 		}
 	}
 }
