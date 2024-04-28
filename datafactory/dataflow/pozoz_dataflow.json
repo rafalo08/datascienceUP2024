@@ -10,9 +10,6 @@
 						"type": "DatasetReference"
 					},
 					"name": "pozossource"
-				},
-				{
-					"name": "source1"
 				}
 			],
 			"sinks": [
@@ -44,8 +41,6 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> pozossource",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1",
 				"pozossource select(mapColumn(",
 				"          id_pozo,",
 				"          nombre",
