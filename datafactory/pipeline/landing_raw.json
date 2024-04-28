@@ -38,6 +38,36 @@
 					},
 					"traceLevel": "Fine"
 				}
+			},
+			{
+				"name": "runs_csv_to_parquet",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "runs_dataflow",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"runsdataflow": {
+								"directory": "trabfinal",
+								"filename": "tabla.runs.avro"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
 			}
 		],
 		"folder": {
