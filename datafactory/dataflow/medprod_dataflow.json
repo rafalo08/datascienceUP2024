@@ -13,11 +13,68 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "cast1"
+				}
+			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          id_medidas as string,",
+				"          id_pozo as string,",
+				"          id_run as string,",
+				"          TEST_DATE as string,",
+				"          BFPD as string,",
+				"          BOPD as string,",
+				"          WC as string,",
+				"          BWPD as string,",
+				"          API as string,",
+				"          TP as string,",
+				"          CP as string,",
+				"          WHT as string,",
+				"          GOR as string,",
+				"          DHA as string,",
+				"          Cl as string,",
+				"          FL as string,",
+				"          BRPD as string,",
+				"          TDH as string,",
+				"          PI as string,",
+				"          PWF as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          id_medidas,",
+				"          id_pozo,",
+				"          id_run,",
+				"          TEST_DATE,",
+				"          BFPD,",
+				"          BOPD,",
+				"          WC,",
+				"          BWPD,",
+				"          API,",
+				"          TP,",
+				"          CP,",
+				"          WHT,",
+				"          GOR,",
+				"          DHA,",
+				"          Cl,",
+				"          FL,",
+				"          BRPD,",
+				"          TDH,",
+				"          PI,",
+				"          PWF",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 cast(output(",
+				"          id_medidas as string",
+				"     ),",
+				"     errors: true) ~> cast1"
 			]
 		}
 	}
