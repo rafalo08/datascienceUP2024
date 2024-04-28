@@ -1,0 +1,17 @@
+{
+	"name": "dt_sink_avro",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			}
+		},
+		"schema": {}
+	}
+}
