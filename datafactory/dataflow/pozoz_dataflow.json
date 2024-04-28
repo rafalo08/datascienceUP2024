@@ -55,7 +55,6 @@
 				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
-				"     rowFolderUrlColumn:'nombre',",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
